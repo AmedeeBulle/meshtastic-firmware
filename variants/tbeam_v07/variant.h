@@ -20,3 +20,6 @@
 #define GPS_RX_PIN 12
 #define GPS_TX_PIN 15
 #define GPS_UBLOX
+
+// Disable brownout
+#define DISABLE_BROWNOUT

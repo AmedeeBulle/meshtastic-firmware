@@ -242,6 +242,11 @@ void printInfo()
 #ifndef PIO_UNIT_TESTING
 void setup()
 {
+#if defined(ARCH_ESP32) && defined(DISABLE_BROWNOUT)
+    // Register with brownout is at DR_REG_RTCCNTL_BASE + 0xd4
+    (*((uint32_t volatile *)ETS_UNCACHED_ADDR((DR_REG_RTCCNTL_BASE + 0xd4)))) = 0;
+#endif
+
     concurrency::hasBeenSetup = true;
 #if ARCH_PORTDUINO
     SPISettings spiSettings(settingsMap[spiSpeed], MSBFIRST, SPI_MODE0);
