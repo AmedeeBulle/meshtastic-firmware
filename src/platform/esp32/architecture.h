@@ -86,6 +86,8 @@
 #define HW_VENDOR meshtastic_HardwareModel_TLORA_V2
 #elif defined(TLORA_V1_3)
 #define HW_VENDOR meshtastic_HardwareModel_TLORA_V1_1P3
+#elif defined(TLORA_V2_1_15)
+#define HW_VENDOR meshtastic_HardwareModel_TLORA_V2_1_1P6
 #elif defined(TLORA_V2_1_16)
 #define HW_VENDOR meshtastic_HardwareModel_TLORA_V2_1_1P6
 #elif defined(TLORA_V2_1_18)
